@@ -2220,9 +2220,21 @@ button,
       1rem;
 }
 
+.py-6{
+  padding-top:
+      1.5rem;
+  padding-bottom:
+      1.5rem;
+}
+
 .text-left{
   text-align:
       left;
+}
+
+.text-center{
+  text-align:
+      center;
 }
 
 .text-lg{
