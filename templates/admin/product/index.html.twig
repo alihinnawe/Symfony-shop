@@ -1,7 +1,20 @@
 {% extends 'admin/base.html.twig' %}
 
-{% block title %}Hello ProductController!{% endblock %}
+{% block title %}Product List{% endblock %}
 
 {% block body %}
-    <h1>Manage Product</h1>
+
+<div class="min-h-screen bg-gradient-to-br from-blue-100 via-green-100 to-white py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto bg-white shadow-xl rounded-3xl p-8 sm:p-10 border border-blue-100">
+        <div class="flex items-center justify-between mb-6"> 
+            <h1 class="text-4x1 font-extrabold text-blue-900 flex items-center gap-2">
+                <span>Product List</span>
+            </h1>
+<a href="#" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-xl shadow hover:bg-blue-700">
+  Add new Product
+</a>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
