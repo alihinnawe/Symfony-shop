@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Admin Dashboard{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('build/tailwind.css') }}">
+        {% endblock %}
+        {% block javascripts %}
+           {#  {% block importmap %} {{% importmap('app') %}} {% endblock %} #}
+        {% endblock %}
+    </head>
+    <body class="bg-gray-100 text-gray-900">
+    <div class="min-h-screen flex flex-col">
+        <header class="bg-white shadow-md p-4 flex justify-between items-center">
+            <div class="text-lg font-bold text-blue-600">Admin Panel</div> 
+        </header>
+
+        <div class="flex flex-1">
+
+            <aside class="w-64 bg-white shadow-md">
+                <nav class="mt-5">
+                    <a href="#" class="block py-2 px-4 hover:bg-blue-100 rounded">Dashboard</a>
+                    <a href="{{path('app_product')}}" class="block py-2 px-4 hover:bg-blue-100 rounded">Manage Product</a>
+                    <a href="#" class="block py-2 px-4 hover:bg-blue-100 rounded">Manage Categories</a>
+                    <a href="#" class="block py-2 px-4 hover:bg-blue-100 rounded">Manage Orders</a>
+                    <a href="#" class="block py-2 px-4 hover:bg-blue-100 rounded">Manage Users</a>
+                </nav>
+            </aside>
+
+            <main class="flex-1 p-6">
+                {% block body %}{% endblock %}
+            </main>
+        </div> <!-- close the flex container -->
+    </div> <!-- close min-h-screen flex flex-col -->
+</body>
+
+</html>
